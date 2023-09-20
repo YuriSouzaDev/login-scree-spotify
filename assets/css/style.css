@@ -9,6 +9,22 @@
   --secondary-color: #1fad52;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .main-login {
   width: max-content;
   background: var(--white-bg);
@@ -28,10 +44,19 @@
   margin-bottom: 40px;
 }
 
+.header-container h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 #left-side {
   color: var(--white);
   background: var(--black);
-  padding: 3.375rem;
+  padding: 0 3.375rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,6 +73,7 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 40px;
+  font-size: 14px;
 }
 
 .login-item a {
@@ -65,6 +91,15 @@
   font-weight: 400;
 }
 
+.login-item h2 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .login-item a:hover {
   border-color: var(--primary-color);
 }
@@ -79,6 +114,7 @@
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 40px;
+  margin-top: 0 !important;
 }
 
 .divider::before,
@@ -127,8 +163,8 @@
 .form label {
   position: absolute;
   z-index: 1;
-  top: 50%;
-  transform: translate(1.5rem, -50%);
+  top: 1rem;
+  left: 1.5rem;
   font-size: 16px;
   font-weight: 400;
 }
@@ -149,6 +185,8 @@
   text-align: right;
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .form button {
@@ -188,4 +226,6 @@
 #right-side img {
   border-radius: 0px 20px 20px 0px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
