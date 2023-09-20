@@ -1,0 +1,11 @@
+# modules
+node_modules/
+
+# configs
+.eslintrc.json
+package-lock.json
+package.json
+webpack.config.js
+
+# js
+assets/js/script.js
