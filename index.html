@@ -5,23 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Login</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <main>
+    <main class="main-login">
         <section id="left-side">
-            <div>
+            <div class="header-container">
                 <img src="./assets/img/icons/spotify_icon.svg" alt="Spotify Icon">
                 <h1>Login to Spotify</h1>
             </div>
 
-            <div class="login-type">
-                <div>
-                    <img src="" alt="">
-                    <h2>Continue com Google</h2>
-                </div>
+            <ul class="external-login">
+                <li class="login-item">
+                    <a href="#">
+                        <img src="./assets/img/icons/google_icon_login.svg" alt="Google icon">
+                        <h2>Continue com Google</h2>
+                    </a>
+                </li>
+                <li class="login-item">
+                    <a href="#">
+                        <img src="./assets/img/icons/facebook_icon_login.svg" alt="Facebook icon">
+                        <h2>Continuar com Facebook</h2>
+                    </a>
+                </li>
+                <li class="login-item">
+                    <a href="#">
+                        <img src="./assets/img/icons/apple_icon_login.svg" alt="Apple icon">
+                        <h2>Continuar com Apple</h2>
+                    </a>
+                </li>
+                <li class="login-item">
+                    <a href="#">
+                        <img src="./assets/img/icons/phone_icon_login.svg" alt="Phone icon">
+                        <h2>Continuar com número telefone</h2>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="divider">ou</p>
+            <div class="form">
+                <form action="#">
+                    <div class="input-item">
+                        <label>Usuário ou Email</label>
+                        <input type="text" name="user" id="user" data-input>
+                    </div>
+                    <div class="input-item">
+                        <label>Senha</label>
+                        <input type="password" name="password" id="password" data-input>
+                    </div>
+                    <a href="#">Esqueceu a senha?</a>
+                    <button type="submit">Entrar</button>
+                </form>
             </div>
+            <h3>Não tem conta ainda? <a href="#">Inscreva-se</a></h3>
+        </section>
+
+        <section id="right-side">
+            <img src="./assets/img/photos/login-image.jpg" alt="Man playing guitar">
         </section>
     </main>
 </body>
