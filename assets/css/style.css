@@ -9,6 +9,22 @@
   --secondary-color: #1fad52;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .main-login {
   width: max-content;
   background: var(--white-bg);
@@ -28,10 +44,19 @@
   margin-bottom: 40px;
 }
 
+.header-container h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 #left-side {
   color: var(--white);
   background: var(--black);
-  padding: 3.375rem;
+  padding: 0 3.375rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,6 +73,7 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 40px;
+  font-size: 14px;
 }
 
 .login-item a {
@@ -63,6 +89,15 @@
   transition: all 0.3s;
   font-size: 14px;
   font-weight: 400;
+}
+
+.login-item h2 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .login-item a:hover {
