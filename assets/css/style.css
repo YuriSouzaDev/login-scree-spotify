@@ -147,6 +147,7 @@ a {
   border: var(--white) solid 1px;
   font-size: 16px;
   color: transparent;
+  color: #f1f1f1;
   font-variant: var(--white);
   position: relative;
   z-index: 2;
@@ -165,6 +166,14 @@ a {
 }
 .form #password {
   margin-bottom: 10px;
+}
+
+.form .input-item img {
+  position: absolute;
+  top: 1.35rem;
+  right: 1.25rem;
+  z-index: 3;
+  cursor: pointer;
 }
 
 .form label {
@@ -192,7 +201,7 @@ a {
   font-weight: 300;
   text-decoration-line: underline;
   text-align: right;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: flex-end;
