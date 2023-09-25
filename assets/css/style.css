@@ -586,3 +586,36 @@ input[type="checkbox"]:checked + label::before {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
+
+@media (max-width: 1150px) {
+  body {
+    padding: 10px;
+  }
+
+  .main-login #left-side {
+    border-radius: 1.25rem;
+    padding: 2rem;
+    width: max-content;
+    height: max-content;
+  }
+
+  .main-login #right-side {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-login {
+    padding: 0;
+  }
+
+  .main-login #left-side {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .divider::before,
+  .divider::after {
+    width: 160px;
+  }
+}

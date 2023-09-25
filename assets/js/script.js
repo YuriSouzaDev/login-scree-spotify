@@ -5,9 +5,6 @@ const labelLogin = document.querySelectorAll("[data-label]");
 function handleFocus(index) {
   // Function que verifica se a input está com foco para mudança no estilo
   labelLogin[index].classList.add("focus");
-  if (mainLogin.classList.contains("inactive")) {
-    labelLogin[index].blur();
-  }
 }
 
 function handleBlur(input, index) {
