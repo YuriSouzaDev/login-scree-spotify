@@ -17,6 +17,18 @@
   box-sizing: border-box;
 }
 
+body {
+  background: var(--black);
+  padding: 40px 0;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "main";
+  place-items: center;
+}
+
 ul {
   list-style: none;
 }
@@ -33,9 +45,28 @@ a {
   border-radius: 1.25rem;
   font-family: "Poppins", sans-serif;
   display: flex;
+  grid-area: main;
+  position: relative;
+  animation: appearFromRight 1s forwards;
+  right: 15%;
 }
 
-.header-container {
+.main-login.inactive {
+  display: none;
+}
+
+@keyframes appearFromRight {
+  from {
+    right: 15%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.main-login .header-container {
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -62,6 +93,8 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 1.25rem 0 0 1.25rem;
+  width: 540px;
+  height: 975px;
 }
 
 #left-side a {
@@ -111,6 +144,9 @@ a {
 
 .divider {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 40px;
@@ -184,6 +220,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   background: var(--black);
+  transition: translate 0.5s scale 500%;
 }
 
 .form label.focus {
@@ -246,4 +283,306 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Sign styles */
+
+.main-sign {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  width: max-content;
+  background: var(--white-bg);
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 1.25rem;
+  grid-area: main;
+  position: relative;
+  animation: appearFromLeft 1s forwards;
+}
+
+.main-sign.inactive {
+  display: none;
+}
+
+@keyframes appearFromLeft {
+  from {
+    left: 15%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.left-sign {
+  position: relative;
+  max-width: 540x;
+  max-height: 975px;
+}
+
+.hand {
+  width: 540px;
+  height: 975px;
+}
+
+.hand img {
+  border-radius: 20px 0 0 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sign-text {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 1.875rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.sign-text img {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.sign-text h2 {
+  color: var(--black);
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.sign-text p {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.sign-text p a {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.right-sign {
+  background: var(--black);
+  padding: 2.5rem 3.75rem;
+  max-width: 540px;
+  color: var(--white);
+  position: relative;
+  border-radius: 0 20px 20px 0;
+}
+
+.social-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social-sign li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  height: 40px;
+  width: 40px;
+  border-radius: 0.5rem;
+}
+
+.social-sign li {
+  border-radius: 0.5rem;
+}
+
+.social-sign li:nth-child(1) {
+  background: #ea4335;
+}
+
+.social-sign li:nth-child(2) {
+  background: #3b5998;
+}
+.social-sign li:nth-child(3) {
+  background: #fff;
+}
+
+.right-sign .divider {
+  margin-bottom: 20px;
+}
+
+.right-sign .divider::before {
+  right: -8px;
+}
+.right-sign .divider::after {
+  left: -8px;
+}
+
+.right-sign label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.right-sign
+  :is(
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    select
+  ) {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  padding: 14px 8px;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--white);
+  align-items: center;
+  height: 46px;
+  transition: all 0.2s;
+  margin-bottom: 1.25rem;
+  background: var(--black);
+  font-family: "Poppins", sans-serif;
+}
+
+.right-sign::placeholder {
+  color: #a2a2a2;
+}
+
+.right-sign input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.birth-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}
+
+.right-sign .password {
+  position: relative;
+}
+
+.right-sign .eye {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 1.25rem;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.right-sign p {
+  color: #a7a7a7;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.paragraph-20 {
+  margin-bottom: 20px;
+}
+
+.gender {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.gender input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+.gender input[type="radio"] + label,
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.gender input[type="radio"] + label {
+  width: max-content;
+}
+
+input[type="checkbox"] + label {
+  font-size: 12px;
+  width: 50ch;
+}
+
+input[type="checkbox"] + label a,
+.more-info span {
+  color: var(--primary-color);
+}
+
+.gender input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #a7a7a7;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.gender input[type="radio"]:checked + label::before {
+  background-color: var(--primary-color);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #a7a7a7;
+  background-color: transparent;
+  border-radius: 0.2rem;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-color: var(--primary-color);
+}
+
+.more-info {
+  margin-bottom: 20px;
+}
+
+.right-sign input[type="submit"] {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: var(--black);
+  font-weight: 500;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: var(--primary-color);
+  width: 364px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }

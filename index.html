@@ -9,65 +9,193 @@
 </head>
 
 <body>
-    <main class="main-login">
-        <section id="left-side">
-            <div class="header-container">
-                <img src="./assets/img/icons/spotify_icon.svg" alt="Spotify Icon">
-                <h1>Login to Spotify</h1>
-            </div>
+    <main class="main">
+        <div class="main-login">
+            <section id="left-side">
+                <div class="header-container">
+                    <img src="./assets/img/icons/spotify_icon.svg" alt="Spotify Icon">
+                    <h1>Login to Spotify</h1>
+                </div>
 
-            <ul class="external-login">
-                <li class="login-item">
-                    <a href="#">
-                        <img src="./assets/img/icons/google_icon_login.svg" alt="Google icon">
-                        <h2>Continuar com Google</h2>
-                    </a>
-                </li>
-                <li class="login-item">
-                    <a href="#">
-                        <img src="./assets/img/icons/facebook_icon_login.svg" alt="Facebook icon">
-                        <h2>Continuar com Facebook</h2>
-                    </a>
-                </li>
-                <li class="login-item">
-                    <a href="#">
-                        <img src="./assets/img/icons/apple_icon_login.svg" alt="Apple icon">
-                        <h2>Continuar com Apple</h2>
-                    </a>
-                </li>
-                <li class="login-item">
-                    <a href="#">
-                        <img src="./assets/img/icons/phone_icon_login.svg" alt="Phone icon">
-                        <h2>Continuar com número de telefone</h2>
-                    </a>
-                </li>
-            </ul>
+                <ul class="external-login">
+                    <li class="login-item">
+                        <a href="#">
+                            <img src="./assets/img/icons/google_icon_login.svg" alt="Google icon">
+                            <h2>Continuar com Google</h2>
+                        </a>
+                    </li>
+                    <li class="login-item">
+                        <a href="#">
+                            <img src="./assets/img/icons/facebook_icon_login.svg" alt="Facebook icon">
+                            <h2>Continuar com Facebook</h2>
+                        </a>
+                    </li>
+                    <li class="login-item">
+                        <a href="#">
+                            <img src="./assets/img/icons/apple_icon_login.svg" alt="Apple icon">
+                            <h2>Continuar com Apple</h2>
+                        </a>
+                    </li>
+                    <li class="login-item">
+                        <a href="#">
+                            <img src="./assets/img/icons/phone_icon_login.svg" alt="Phone icon">
+                            <h2>Continuar com número de telefone</h2>
+                        </a>
+                    </li>
+                </ul>
 
-            <p class="divider">ou</p>
-            <div class="form">
-                <form action="#">
-                    <div class="input-item">
-                        <label data-label>Usuário ou Email</label>
-                        <input type="text" name="user" id="user" data-input>
-                    </div>
-                    <div class="input-item">
-                        <label data-label>Senha</label>
-                        <input type="password" name="password" id="password" maxlength="10" data-input>
-                        <img data-password-icon src="./assets/img/icons/eye.svg" alt="">
-                    </div>
-                    <a href="#">Esqueceu a senha?</a>
-                    <button type="submit">Entrar</button>
-                </form>
-            </div>
-            <h3>Não tem conta ainda? <a href="#">Inscreva-se</a></h3>
-        </section>
+                <p class="divider">ou</p>
+                <div class="form">
+                    <form action="#">
+                        <div class="input-item">
+                            <label data-label>Usuário ou Email</label>
+                            <input type="text" name="user" id="user" data-input required>
+                        </div>
+                        <div class="input-item">
+                            <label data-label>Senha</label>
+                            <input type="password" name="password" id="password" maxlength="10" data-password data-input required>
+                            <img data-password-icon src="./assets/img/icons/eye.svg" alt="">
+                        </div>
+                        <a href="#">Esqueceu a senha?</a>
+                        <button type="submit">Entrar</button>
+                    </form>
+                </div>
+                <h3>Não tem conta ainda? <a class="go-to-sign" href="#">Inscreva-se</a></h3>
+            </section>
 
-        <section id="right-side">
-            <img src="./assets/img/photos/login-image.jpg" alt="Man playing guitar">
-        </section>
+            <section id="right-side">
+                <img src="./assets/img/photos/login-image.jpg" alt="Man playing guitar">
+            </section>
+        </div>
+
+        <div class="main-sign">
+            <section class="left-sign">
+                <div class="sign-text">
+                    <img src="/assets/img/icons/spotify_icon.svg" alt="Spotify Icon">
+                    <h2>Inscreva-se para começar a ouvir</h2>
+                    <p>Não tem conta ainda? <a class="go-to-login" href="#">Inscreva-se</a></p>
+                </div>
+                <div class="hand">
+                    <img src="./assets/img/photos/sign_up.jpeg" alt="hand with headphone">
+                </div>
+            </section>
+
+            <section class="right-sign">
+                <ul class="social-sign">
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/icons/google_icon_sign.svg" alt="Google Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/icons/facebook_icon_sign.svg" alt="Facebook icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/img/icons/phone_icon_sign.svg" alt="Phone icon">
+                        </a>
+                    </li>
+                </ul>
+                <p class="divider">ou</p>
+                <div class="form-sign">
+                    <form action="#">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Este nome que aparecerá no seu perfil" required>
+                        </div>
+                        <div>
+                            <label for="date">Data de nascimento</label>
+                            <div class="birth-form">
+                                <input type="number" name="date" id="day" placeholder="dd" required>
+                                <select name="date" id="month">
+                                    <option disabled selected>mês</option>
+                                    <option value="january">Janeiro</option>
+                                    <option value="fabruary">Fevereiro</option>
+                                    <option value="march">Março</option>
+                                    <option value="april">Abril</option>
+                                    <option value="may">Maio</option>
+                                    <option value="june">Junho</option>
+                                    <option value="july">Julho</option>
+                                    <option value="august">Agosto</option>
+                                    <option value="september">Setembro</option>
+                                    <option value="october">Outubro</option>
+                                    <option value="november">Novembro</option>
+                                    <option value="december">Dezembro</option>
+                                </select>
+                                <input type="number" name="date" id="year" placeholder="aaaa" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email">Endereço de email</label>
+                            <input type="email" name="email" id="email" placeholder="name@gmail.com">
+                        </div>
+                        <div>
+                            <label for="password">Senha</label>
+                            <div class="password">
+                                <input type="password" name="password" id="passwordSign" maxlength="10" data-password required>
+                                <img data-password-icon src="./assets/img/icons/eye.svg" class="eye" alt="">
+                            </div>
+                            <p class="paragraph-20">
+                                A senha deve conter pelo menos 8 caracteres.
+                                Recomendamos incluir pelo menos 1 número e 1 caractere especial.
+                            </p>
+                        </div>
+                        <div>
+                            <label>Gênero</label>
+                            <p>
+                                Usamos seu gênero para ajudar a personalizar nossas recomendações de conteúdo e anúncios para você.
+                            </p>
+                            <div class="gender">
+                                <div>
+                                    <input type="radio" name="gender" id="man">
+                                    <label for="man">Homem</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="gender" id="woman">
+                                    <label for="woman">Mulher</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="gender" id="no-b">
+                                    <label for="no-b">Não Binário</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="gender" id="some">
+                                    <label for="some">Algo mais</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="gender" id="prefer-dont">
+                                    <label for="prefer-dont">Prefiro não dizer</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="marketing" id="marketing">
+                            <label for="marketing">Prefiro não receber mensagens de marketing do Spotify</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="share" id="share">
+                            <label for="share">Compartilhar meus dados cadastrais com os provedores de conteúdo do Spotify para fins de marketing.</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="terms" id="terms" required>
+                            <label for="terms">Concordo com os <a href="#">Termos e Condições de Uso do Spotify.</a></label>
+                        </div>
+
+                        <div class="more-info">
+                            <p>Para saber mais sobre como o Spotify coleta, usa, compartilha e protege seus dados pessoais, consulte a <span>Política de Privacidade do Spotify.</span></p>
+                        </div>
+
+                        <input type="submit" value="Inscreve-se">
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <script src="./assets/js/main.js"></script>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
